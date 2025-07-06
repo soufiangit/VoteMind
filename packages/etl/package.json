@@ -1,0 +1,32 @@
+{
+  "name": "@votebrain/etl",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "propublica": "ts-node src/propublica.ts",
+    "openstates": "ts-node src/openstates.ts",
+    "opensecrets": "ts-node src/opensecrets.ts",
+    "embeddings": "ts-node src/embeddings.ts",
+    "mobilize": "ts-node src/mobilize.ts",
+    "news": "ts-node src/news.ts",
+    "prime": "ts-node src/prime.ts"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.43.4",
+    "axios": "^1.6.5",
+    "dotenv": "^16.3.1",
+    "node-cron": "^3.0.3",
+    "openai": "^4.26.0",
+    "pgvector": "^0.1.5",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "@types/node-cron": "^3.0.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
