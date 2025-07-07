@@ -1,6 +1,7 @@
 # VoteBrain
+I worked in nonpartisan canvassing for two years. And what I saw the most, is that people did not know who to vote for. And because I had to remain nonpartisan, I could not provide that information. This project, VoteBrain, changes that.
 
-VoteBrain is a platform that helps voters make informed decisions by matching them with candidates and bills based on their values, providing lobbying data transparency, and connecting them with volunteer opportunities.
+VoteBrain is a platform that helps voters make informed decisions by matching them with candidates and bills based on their values, providing lobbying data transparency, and connecting them with volunteer opportunities, while remaining nonpartisan, and informative.
 
 ## Features
 
@@ -16,74 +17,8 @@ VoteBrain is a platform that helps voters make informed decisions by matching th
 - **Backend**: Vercel Serverless, Supabase, Auth.js
 - **Database**: PostgreSQL with pgvector for similarity search
 - **ETL**: Supabase Edge Functions, Scheduled Jobs
-- **APIs**: ProPublica, OpenStates, OpenSecrets, Mobilize.us, Google Civic, OpenAI
+- **APIs**:  OpenStates, OpenSecrets, Google Civic, OpenAI
 
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18+
-- npm, yarn, or pnpm
-- Supabase account
-- API keys for various services
-
-### Installation
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/votebrain.git
-cd votebrain
-```
-
-2. Install dependencies:
-
-```bash
-cd apps/web
-npm install
-```
-
-3. Create a `.env.local` file based on `.env.example`:
-
-```
-NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
-OPENAI_API_KEY=your-openai-key
-PROPUBLICA_API_KEY=your-propublica-key
-OPENSTATES_API_KEY=your-openstates-key
-GOOGLE_CIVIC_API_KEY=your-google-civic-key
-NEWS_API_KEY=your-news-api-key
-VOTEAMERICA_API_KEY=your-voteamerica-key
-```
-
-4. Run the development server:
-
-```bash
-npm run dev
-```
-
-5. Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-### Setting Up Supabase
-
-1. Create a new Supabase project
-2. Run the schema migration from `apps/web/schema.sql`
-3. Enable the pgvector extension
-4. Set up authentication providers (Email, Google)
-5. Create Edge Functions for ETL processes
-
-### Running ETL Jobs
-
-For local development, you can run the ETL jobs manually:
-
-```bash
-npm run etl:prime   # Load initial data
-npm run fetch:orgs  # Update organization partisanship data
-```
-
-In production, these jobs are scheduled to run automatically.
-
-## Deployment
 
 ### Vercel Deployment
 
